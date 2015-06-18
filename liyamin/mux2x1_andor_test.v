@@ -1,6 +1,6 @@
 `include "mux2x1_andor.v"
 
-module mux2x1_3s_test;
+module mux2x1_andor_test;
    reg s, a0, a1;
    wire y;
 
@@ -26,4 +26,4 @@ module mux2x1_3s_test;
 	$dumpvars;
      end
    
-endmodule // mux2x1_3s_test
+endmodule // mux2x1_andor_test
