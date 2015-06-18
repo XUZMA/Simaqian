@@ -1,6 +1,6 @@
 `include "mux2x1_dataflow1.v"
 
-module mux2x1_nand_test;
+module mux2x1_dataflow1_test;
    reg s, a0, a1;
    wire y;
 
@@ -26,4 +26,4 @@ module mux2x1_nand_test;
 	$dumpvars;
      end
    
-endmodule // mux2x1_nand_test
+endmodule // mux2x1_dataflow1_test
