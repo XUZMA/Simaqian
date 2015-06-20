@@ -18,6 +18,16 @@ module shift_mux_test;
 	#1 data = 32'hFF00_00FF; shift_amount = 24; right = 1; arithmetic = 1;
 	#1 data = 32'hFF00_00FF; shift_amount = 28; right = 1; arithmetic = 1;
 	#1 data = 32'hFF00_00FF; shift_amount = 31; right = 1; arithmetic = 1;
+
+	#1 data = 32'hFF00_00FF; shift_amount = 4; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 8; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 12; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 16; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 20; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 24; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 28; right = 1; arithmetic = 0;
+	#1 data = 32'hFF00_00FF; shift_amount = 31; right = 1; arithmetic = 0;
+	
 	#1 data = 32'hFF00_00FF; shift_amount = 4; right = 0; arithmetic = 1;
 	#1 data = 32'hFF00_00FF; shift_amount = 8; right = 0; arithmetic = 1;
 	#1 data = 32'hFF00_00FF; shift_amount = 12; right = 0; arithmetic = 1;
