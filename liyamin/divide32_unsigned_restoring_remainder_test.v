@@ -89,6 +89,8 @@ module divide32_unsigned_restoring_remainder_test;
 	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 21
 	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 21
 	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 22
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 22
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 23
      end
 
    initial
