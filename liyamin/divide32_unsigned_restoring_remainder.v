@@ -55,7 +55,7 @@ module divide32_unsigned_restoring_remainder(quotient, remainder, ready, busy, c
 	else    // not reset
 	  begin
 	     busy2 <= busy;  // 1-cycle delay of busy
-	     if(start)              // start: 1 cycle only
+	     if(start == 1)              // start: 1 cycle only
 	       begin
 		  reg_remainder <= 16'h0;    // reset remainder
 		  reg_quotient <= dividend; // load dividend
@@ -64,7 +64,7 @@ module divide32_unsigned_restoring_remainder(quotient, remainder, ready, busy, c
 		  busy <= 1'b1;                     // set busy to 1
 	       end
 	     else
-	       if(busy)                                  // execution: 32 cycles
+	       if(busy == 1)                                  // execution: 32 cycles
 		 begin
 		    reg_remainder <= restoring_remainder;
 		    reg_quotient <= {reg_quotient[30:0], ~difference[16]};

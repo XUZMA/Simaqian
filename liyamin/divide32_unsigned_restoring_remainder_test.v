@@ -17,33 +17,78 @@ module divide32_unsigned_restoring_remainder_test;
 
    initial
      begin
-	reset = 1; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 1; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 0; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
-	#1 reset = 0; clock = 1; start = 0; dividend = 32'hFFFF_FFFF; divisor = 16'h0002;
+	reset = 0; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0
+	#1 reset = 0; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // posedge clock, reset == 0, count = 0
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 1; // count = 0
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 1; // posedge clock, start == 1, count = 0
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 2
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 2
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 3
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 3
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 4
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 4
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 5
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 5
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 6
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 6
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 7
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 7
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 8
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 8
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 9
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 9
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0a
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0a
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0b
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0b
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0c
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0c
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0d
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0d
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0e
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0e
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0f
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 0f
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 10
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 10
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 11
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 11
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 12
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 12
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 13
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 13
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 14
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 14
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 15
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 15
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 16
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 16
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 17
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 17
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 18
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 18
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 19
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 19
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1a
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1a
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1b
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1b
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1c
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1c
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1d
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1d
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1e
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1e
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1f
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 1f
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 20
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 20
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 21
+	#1 reset = 1; clock = 0; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 21
+	#1 reset = 1; clock = 1; dividend = 32'h0002_0000; divisor = 16'hFFFF; start = 0; // count = 22
      end
 
    initial
@@ -54,4 +99,3 @@ module divide32_unsigned_restoring_remainder_test;
      end
    
 endmodule // divide32_unsigned_restoring_remainder_test
-
